@@ -54,10 +54,11 @@ The program identifies and highlights potential outliers:
 Written by Stephane M. Gagne, Laval University, Canada  
 (Replacement for my old 2004 "stats1" awk script)  
 
-v. 0.1.1 (2019-09-19) :
+v. 0.1.1 (2019-09-19) :  
 - rewrote some code (more compact)
 - improved comments
 - added # of outliers to console output
-v. 0.1.0 (2019-09-15) :
+
+v. 0.1.0 (2019-09-15) :  
  - Initial version
 
