@@ -5,17 +5,17 @@ Usage : cstats.py filename column# [column label] [GRAPH flag] [SAVE_TRIMMED_DAT
 
 Usage 1 (with filename) :
 ```
-    cstats.py filename # [label] [graph?] [save trimmed data?]
+    cstats.py filename column# [label] [graph?] [save trimmed data?]
 
-    # : column number (0 = first column)
+    column# : 0 = first column
 ```
 Usage 2 (with STDIN) :
 ```
-    cstats.py stdin # [label] [graph?] [save trimmed data?] < filename
+    cstats.py stdin column# [label] [graph?] [save trimmed data?] < filename
     cat filename | cstats.py stdin # [label]
     tail -n 100 filename | cstats.py stdin # [label]
     
-    # : column number (0 = first column)
+    column# : 0 = first column
 ```
 
 ## Optional arguments
