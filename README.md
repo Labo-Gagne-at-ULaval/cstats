@@ -76,6 +76,8 @@ The program identifies and highlights potential outliers:
 - Histogram with mean and median
 - For all data point and for trimmed data points (without outliers)
 
+### Sample graphical output
+![Sample graphical output](tests/testing_2__normal_distribution_data_+_outsiders.png)
 ## Versions
 Written by Stephane M. Gagne, Laval University, Canada  
 (Replacement for my old 2004 "stats1" awk script)  
