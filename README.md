@@ -5,21 +5,21 @@ Usage : cstats.py filename column# [column label] [GRAPH flag] [SAVE_TRIMMED_DAT
 
 Usage 1 (with filename) :
 ```
-    cstats.py filename column# [label] [graph?] [save trimmed data?]
+cstats.py filename column# [label] [graph?] [save trimmed data?]
 
-    column# : 0 = first column
+  column# : 0 = first column
 ```
 Usage 2 (with STDIN) :
 ```
-    cstats.py stdin column# [label] [graph?] [save trimmed data?] < filename
-    cat filename | cstats.py stdin # [label]
-    tail -n 100 filename | cstats.py stdin # [label]
+cstats.py stdin column# [label] [graph?] [save trimmed data?] < filename
+cat filename | cstats.py stdin # [label]
+tail -n 100 filename | cstats.py stdin # [label]
     
     column# : 0 = first column
 ```
 
 ## Optional arguments
-Optional third argument : label for the number in column
+Optional third argument : label for the column
 - if label is more than one word, or contains special characters, use single quotes : 'protein concentration (mM)'
 
 Optional fourth argument : 0 (no graph) or 1 (graph, default)
@@ -33,22 +33,23 @@ The program identifies and highlights potential outliers:
 
 ## Output to terminal (6 columns):
 ```
-    [1] All data    [2-6] Trimmed data, round 1-5
-        Count
-        Min
-        Max
-        Mean
-        StD (standard deviation with ddof=1)
-        MeanAD (mean absolute deviation)
-        SEM (standard error of the mean)
-        ci95 (95% confidence interval for mean based on SEM)
-        Median
-        MAD (median absolute deviation)
-        Skewness
-        Kurtosis (normal Gaussian has kurtosis=0)
+[1] All data    [2-6] Trimmed data, round 1-5
+    Count
+    Min
+    Max
+    Mean
+    StD (standard deviation with ddof=1)
+    MeanAD (mean absolute deviation)
+    SEM (standard error of the mean)
+    ci95 (95% confidence interval for mean based on SEM)
+    Median
+    MAD (median absolute deviation)
+    Skewness
+    Kurtosis (normal Gaussian has kurtosis=0)
 ```
 ## Graphical output :
 - Histogram with mean and median
+- For all data point and for trimmed data points (without outliers)
 
 ## Versions
 Written by Stephane M. Gagne, Laval University, Canada  
