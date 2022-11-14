@@ -84,7 +84,7 @@ SAVE_TRIMMED_DATA flag
     0 : do not save trimmed data
     1 : prompt for saved data
 '''
-TESTING=0
+TESTING=2
 GRAPH=1
 SAVE_TRIMMED_DATA=0
 
@@ -115,13 +115,13 @@ def thousands(x, pos):               # Divide tick labels by 1000
 def make_test_data(testing):         # Generate test data
     rg=np.random.default_rng()
     size=1000000
-    outliers=100000
+    outliers=10000
     outliers_center=6
     if testing == 1 :
         d=rg.standard_normal(size)
     elif testing == 2 :
         d=rg.standard_normal(size)
-        d[:outliers]=rg.normal(outliers_center,1.0,outliers)
+        d[:outliers]=rg.normal(outliers_center,0.1,outliers)
     elif testing == 3 :
         d=rg.standard_normal(size)
         n=int(0.60*size+1)
@@ -133,8 +133,8 @@ def make_test_data(testing):         # Generate test data
     elif testing == 6 :
         outliers=int(outliers/2)
         d=rg.standard_normal(size)
-        d[:outliers]=rg.normal(outliers_center,1.0,outliers)
-        d[outliers:outliers*2]=rg.normal(-outliers_center,1.0,outliers)
+        d[:outliers]=rg.normal(outliers_center,0.1,outliers)
+        d[outliers:outliers*2]=rg.normal(-outliers_center,0.5,outliers)
     elif testing == 10 :
         d=np.array([1,2,3,4,5,6,7,8,9])
     return d
