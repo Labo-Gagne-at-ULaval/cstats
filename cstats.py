@@ -359,6 +359,7 @@ if GRAPH == 1 :
     ax2.yaxis.tick_right()
     ax4.yaxis.tick_right()
     ax1.ticklabel_format(axis='x', style='plain')
+    ax2.ticklabel_format(axis='x', style='plain')
     
     plValues(ax1,d[0],mean[0],median[0],MAD[0])
     plValues(ax2,d[1],mean[1],median[1],MAD[1])
@@ -376,5 +377,5 @@ if GRAPH == 1 :
     plt.figtext(0.995, 0.005, "cstats.py: Stephane M. Gagne\nLaval University (2019)", ha='right', va='bottom', fontsize=7)
     
     # Plot to screen
-    plt.subplots_adjust(top=0.915,bottom=0.07,left=0.045,right=0.955,hspace=0.015,wspace=0.02)
+    plt.subplots_adjust(top=0.915,bottom=0.07,left=0.045,right=0.955,hspace=0.015,wspace=0.04)
     plt.show()
