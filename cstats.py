@@ -358,6 +358,7 @@ if GRAPH == 1 :
     ax2.xaxis.tick_top()
     ax2.yaxis.tick_right()
     ax4.yaxis.tick_right()
+    ax1.ticklabel_format(axis='x', style='plain')
     
     plValues(ax1,d[0],mean[0],median[0],MAD[0])
     plValues(ax2,d[1],mean[1],median[1],MAD[1])
