@@ -84,7 +84,7 @@ SAVE_TRIMMED_DATA flag
     0 : do not save trimmed data
     1 : prompt for saved data
 '''
-TESTING=2
+TESTING=0
 GRAPH=1
 SAVE_TRIMMED_DATA=0
 
