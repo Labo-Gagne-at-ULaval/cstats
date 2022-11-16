@@ -1,4 +1,5 @@
-# cstats - Script to compute statistics for a chosen column in a file.
+# cstats - column statistics
+cstats is a python program to compute statistics for a chosen column in a file.
 
 ## Usage
 Usage : cstats.py filename column# [column label] [GRAPH flag] [SAVE_TRIMMED_DATA flag]
