@@ -84,7 +84,7 @@ SAVE_TRIMMED_DATA flag
     0 : do not save trimmed data
     1 : prompt for saved data
 '''
-TESTING=0
+TESTING=2
 GRAPH=1
 SAVE_TRIMMED_DATA=0
 
@@ -99,7 +99,6 @@ import numpy as np
 import math
 import scipy.stats as st
 sys.path.append('/home/smg/bin')
-import mean_abs_dev
 
 mpl.rcParams['font.family'] = 'monospace'
 mpl.rcParams['font.monospace'] = 'Cousine'
@@ -152,7 +151,7 @@ def doStats(array,i):                 # Compute statistics and generate trimmed 
     ci95[i]=sem[i]*1.96
     median[i]=np.median(array)
     mad[i]=st.median_abs_deviation(array,scale=mad_sf)
-    mean_ad[i]=mean_abs_dev.mean_absolute_deviation(array,center=np.mean,scale=mean_ad_sf)
+    mean_ad[i]=mean_ad_sf*np.mean(np.absolute(array-np.mean(array)))
     skew[i]=st.skew(array,bias=1)
     kurt[i]=st.kurtosis(array,fisher=True)
     if mad[i] != 0.0 :             # Use MAD if MAD != 0
